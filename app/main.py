@@ -26,7 +26,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, target) -> None:
+    def bite(self, target: list[Animal]) -> None:
         if not isinstance(target, Herbivore):
             return
         if target.hidden:
