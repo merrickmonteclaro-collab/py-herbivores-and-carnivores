@@ -10,7 +10,8 @@ class Animal:
         self.name = name
         self.__health = health
         self.hidden = hidden
-        Animal.alive.append(self)
+        if self.__health > 0:
+            Animal.alive.append(self)
 
     @property
     def health(self) -> int:
