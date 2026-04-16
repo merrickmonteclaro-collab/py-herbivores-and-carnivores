@@ -26,7 +26,7 @@ class Animal:
     def __repr__(self) -> str:
         return (
             f"{{Name: {self.name}, "
-            f"Health: {self.health}, "
+            f"Health: {self.__health}, "
             f"Hidden: {self.hidden}}}"
         )
 
@@ -42,6 +42,6 @@ class Carnivore(Animal):
             return
         if target.hidden:
             return
-        target.health = max(0, target.health - 50)
+        target.health = target.health - 50
         if target.health == 0:
             Animal.alive.remove(target)
